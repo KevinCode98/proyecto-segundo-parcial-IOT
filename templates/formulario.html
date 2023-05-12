@@ -1,0 +1,141 @@
+{% extends 'index.html' %} {% block content %}
+    <div class="content container">
+        <p></p>
+        <h1>Ingresar Empleado</h1>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Nombre(s):</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="nombre"
+                            placeholder="Nombre"
+                    />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Apellido Paterno:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="paterno"
+                            placeholder="Paterno"
+                    />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Apellido Materno:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="materno"
+                            placeholder="Materno"
+                    />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputEmail4">Cargo empresarial:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="cargo"
+                            placeholder="Software Development - Python"
+                    />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputPassword4">Empresa:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="empresa"
+                            placeholder="Oracle"
+                    />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="inputEmail4">Calle:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="calle"
+                            placeholder="Av.Patria"
+                    />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Num.Ext:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="exterior"
+                            placeholder="4035"
+                    />
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputPassword4">Num.Int:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="interior"
+                            placeholder="32"
+                    />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputEmail4">Colonia:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="colonia"
+                            placeholder="La Estancia"
+                    />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Municipio:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="municipio"
+                            placeholder="Guadalajara"
+                    />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Estado:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="estado"
+                            placeholder="Jalisco"
+                    />
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputPassword4">Codigo Postal:</label>
+                    <input
+                            type="text"
+                            class="form-control"
+                            id="codigo"
+                            placeholder="45030"
+                    />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="inputCity">Correo Electrónico:</label>
+                    <input type="email" class="form-control" id="correo" placeholder="ejemplo@gmail.com"/>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputCity">Cumpleaños:</label>
+                    <input type="text" class="form-control" id="cumple" placeholder="24-06-1993"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="enviar"/>
+                    <label class="form-check-label" for="gridCheck"> Enviar correo </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+    </div>
+{% endblock %}

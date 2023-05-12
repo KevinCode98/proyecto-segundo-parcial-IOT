@@ -1,0 +1,24 @@
+{% extends 'index.html' %} {% load crispy_forms_tags %} {% block content %}
+    <div class="content container">
+        {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                Faltan datos del formulario! D:<
+            </div>
+        {% endif %}
+        <p></p>
+        <h1> Registro de Empleados</h1>
+        <form action="{% url 'guardarEmpleado' %}" method="POST">
+
+            {% csrf_token %}
+            {% if mensaje %}
+                <div class="alert alert-success" role="alert">
+                    El empleado se ha registrado exitosamente! (:
+                </div>
+            {% endif %}
+
+            {{ form | crispy }}
+
+            <button type="submit" class="btn btn-primary mb-5">Guardar</button>
+        </form>
+    </div>
+{% endblock %}

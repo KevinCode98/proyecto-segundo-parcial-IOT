@@ -1,0 +1,28 @@
+{% extends 'index.html' %} {% load crispy_forms_tags %} {% block content %}
+    <div class="content container">
+        {% if form.errors %}
+            <div class="alert alert-danger" role="alert">
+                Faltan datos del formulario! D:<
+            </div>
+        {% endif %}
+        <p></p>
+        <h1> Editar Empleado</h1>
+        <form action="{% url 'actualizarEmpleado' empleado.id %}" method="POST">
+            {% csrf_token %}
+            {% if mensaje %}
+                <div class="alert alert-success" role="alert">
+                    El empleado se ha actualizado exitosamente! (:
+                </div>
+            {% endif %}
+
+            {{ form | crispy }}
+
+            <div class="form-group">
+                <div class="md-5">
+                    <button type="submit" class="btn btn-primary">Actualizar</button>
+                    <a class="btn btn-danger" href="{% url 'listarCorreos' %}">Cancelar</a>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
